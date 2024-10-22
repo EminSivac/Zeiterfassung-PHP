@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        }
+      </style>
+</head>
+<body>
+    <form method="post" action="send_all.php">
+        <p>
+        <label for="Betreff">Betreff</label><br>
+        <textarea cols="200" rows="5" name="Betreff" id="Betreff" required></textarea></p>
+        <p><label for="Inhalt">Inhalt</label><br>
+        <textarea cols="200" rows="50" name="Inhalt" id="Inhalt" required></textarea></p>
+        <button type="submit">Senden</button>
+    </form>
+</body>
+</html>

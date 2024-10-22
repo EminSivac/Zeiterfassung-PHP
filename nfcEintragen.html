@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        }
+      </style>
+</head>
+<body>
+    <form method="post" action="nfcEintragen.php">
+        <label for="MitarbeiterID">MitarbeiterID: </label><br>
+        <input type="number" id="MitarbeiterID" name="MitarbeiterID" placeholder="MitarbeiterID" required/><br><br>
+
+        <label for="NFC">NFC: </label><br>
+        <input type="number" id="NFC" name="NFC" placeholder="NFC" required/><br><br>
+
+        <button type="submit">Eintragen</button>
+    </form>
+    <form method="post" action="admin.php">
+        <input type="hidden" name="Admin" id="Admin" value="root">
+        <input type="hidden" name="Password" id="Password" value="t568jswi">
+        <input type="submit" value="zurück">
+    </form>
+</body>
+</html>

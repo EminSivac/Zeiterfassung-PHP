@@ -1,0 +1,6 @@
+{
+    "require": {
+        "box/spout": "^3.3",
+        "shuchkin/simplexlsxgen": "^1.4"
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webterminal</title>
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        }
+      </style>
+    <script>
+        function merken()
+        {
+            if(document.getElementById('Merken').checked == true)
+            {
+                localStorage.setItem("MitarbeiterID", document.getElementById('MitarbeiterID').value);
+                localStorage.setItem("PIN", document.getElementById('PIN').value);
+                localStorage.setItem("Merken", document.getElementById('Merken').checked);
+            }
+            else if(document.getElementById('Merken').checked == false)
+            {
+                localStorage.removeItem("MitarbeiterID");
+                localStorage.removeItem("PIN");
+                localStorage.removeItem("Merken");
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hier kannst du den Code platzieren, der ausgeführt werden soll, wenn die Seite geladen ist
+            document.getElementById('MitarbeiterID').value = localStorage.getItem("MitarbeiterID");
+            document.getElementById('PIN').value = localStorage.getItem("PIN");
+            document.getElementById('Merken').checked = localStorage.getItem("Merken");
+
+            if(document.getElementById('Merken').checked == true)
+            {
+                document.getElementById("deinFormularId").submit();
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Zeiterfassungssystem</h1>
+    <form method="post" id="deinFormularId" action="webterminalLogin.php">
+
+        <label for="MitarbeiterID">MitarbeiterID: </label><br>
+        <input type="text" id="MitarbeiterID" name="MitarbeiterID" placeholder="MitarbeiterID" required/><br><br>
+
+        <label for="PIN">PIN: </label><br>
+        <input type="password" id="PIN" name="PIN" placeholder="PIN" required/><br><br>
+        
+        <label for="Merken">Merken: </label><br>
+        <input type="checkbox" id="Merken" onclick="merken()"><br><br>
+
+        <button type="submit">Anmelden</button>
+    </form>
+</body>
+</html>

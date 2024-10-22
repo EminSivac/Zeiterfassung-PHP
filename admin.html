@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script>
+        function merken()
+        {
+            if(document.getElementById('MerkenA').checked == true)
+            {
+                localStorage.setItem("Admin", document.getElementById('Admin').value);
+                localStorage.setItem("Password", document.getElementById('Password').value);
+                localStorage.setItem("MerkenA", document.getElementById('MerkenA').checked);
+            }
+            else if(document.getElementById('MerkenA').checked == false)
+            {
+                localStorage.removeItem("Admin");
+                localStorage.removeItem("Password");
+                localStorage.removeItem("MerkenA");
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            // Hier kannst du den Code platzieren, der ausgeführt werden soll, wenn die Seite geladen ist
+            document.getElementById('Admin').value = localStorage.getItem("Admin");
+            document.getElementById('Password').value = localStorage.getItem("Password");
+            document.getElementById('MerkenA').checked = localStorage.getItem("MerkenA");
+
+            if(document.getElementById('MerkenA').checked == true)
+            {
+                document.getElementById("deinFormularId").submit();
+            }
+        });
+    </script>
+      <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        }
+      </style>
+</head>
+<body>
+    <h1>Zeiterfassungssystem</h1>
+    <form method="post" id="deinFormularId" action="admin.php">
+
+        <label for="Admin">Name: </label><br>
+        <input type="text" id="Admin" name="Admin" placeholder="Name" required/><br><br>
+
+        <label for="Password">Password: </label><br>
+        <input type="password" id="Password" name="Password" placeholder="Password" required/><br><br>
+        
+        <label for="MerkenA">Merken: </label><br>
+        <input type="checkbox" id="MerkenA" onclick="merken()"><br><br>
+        
+        <button type="submit">Anmelden</button>
+    </form>
+    <!-- <footer style="position: fixed;border-top: solid;left: 0;bottom: 0;width: 100%;text-align: center;">
+        Programmiert und verwaltet von Emin Sivac
+    </footer> -->
+</body>
+</html>
