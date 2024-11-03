@@ -9,18 +9,18 @@ Die Anwendung ist in drei Bereiche unterteilt:
 
 Admin-Bereich:
 
-    Ermöglicht Administratoren die Einsicht in alle erfassten Arbeitszeiten.
-    Bietet die Möglichkeit, Arbeitszeiten als PDF oder XLSX zu exportieren.
+  Ermöglicht Administratoren die Einsicht in alle erfassten Arbeitszeiten.
+  Bietet die Möglichkeit, Arbeitszeiten als PDF oder XLSX zu exportieren.
 
 Mitarbeiter-Bereich:
 
-    Ermöglicht jedem Mitarbeiter die Einsicht in seine eigenen Arbeitszeiten.
-    Mitarbeiter können Änderungsanträge stellen, falls Korrekturen an den Arbeitszeiten notwendig sind, z. B. bei Fehlern.
-    Hier können auch Urlaubstage und Krankentage ergänzt werden.
+  Ermöglicht jedem Mitarbeiter die Einsicht in seine eigenen Arbeitszeiten.
+  Mitarbeiter können Änderungsanträge stellen, falls Korrekturen an den Arbeitszeiten notwendig sind, z. B. bei Fehlern.
+  Hier können auch Urlaubstage und Krankentage ergänzt werden.
 
 Büro-Tool:
 
-    Ein einfaches Tool, mit dem Mitarbeiter sich für den Arbeitstag „stempeln“ können, um ihre Arbeitszeit zu erfassen.
+  Ein einfaches Tool, mit dem Mitarbeiter sich für den Arbeitstag „stempeln“ können, um ihre Arbeitszeit zu erfassen.
 
 Installation
     Alle Dateien in das Verzeichnis auf dem Webserver hochladen, in dem PHP-Skripte ausgeführt werden können.
