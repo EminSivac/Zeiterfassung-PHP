@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        .accordion {
+          background-color: #f3f3f3;
+          color: black;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 25px;
+          transition: 0.4s;
+        }
+        
+        .active, .accordion:hover {
+          background-color: #bebebe; 
+        }
+        
+        .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        width: 95%;
+        text-align: center;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        }
+        </style>
+        
+</head>
+<body>
+    <h1>Zeiterfassungssystem</h1>
+    <h2>FAQ</h2>
+    <br>
+    <button class="accordion">Wie stelle ich einen Antrag?</button>
+    <div class="panel">
+        <p>Zuerst meldest du dich im Mitarbeiter-Portal an, dort ist ein Knopf mit der Aufschrift "Antragstellen". <br>
+        Nun füllst du das Formular aus, dabei wählst du den betroffenen Tag, den Arbeitsbeginn, das Arbeitsende, die Pausendauer<br>
+         und hinterlässt eine kleine Beschreibung, bei der Art wählst du zwischen einer Korrektur oder einem Nachtragen und schickst es ab.</p>
+    </div>
+
+    <button class="accordion">Kann ich einen Antrag für den letzten Monat stellen?</button>
+    <div class="panel">
+        <p>Ja, die Zeit wird dann für denn nächsten Monat als Überzeit berechnet.</p>
+    </div>
+
+    <button class="accordion">Was tun, wenn die NFC-Chips nicht gehen?</button>
+    <div class="panel">
+        <p>In der Taskleiste ist ganz rechts ein Programm [Das ohne ein Logo]. Dieses muss ausgeführt werden. <br>
+            Bei Readingmode muss eine "3" stehen und danach auf "Start" gedrückt werden.</p>
+    </div>
+
+    <button class="accordion">Muss ich jeden Monat meine Sollzeiten anpassen?</button>
+    <div class="panel">
+        <p>Nein, außer es sollte sich etwas bei deinen Kernarbeitszeiten ändern.<p>
+    </div>
+
+    <button class="accordion">Wie kann ich meine Zeiten sehen inkl. Prognose?</button>
+    <div class="panel">
+        <p>Im Mitarbeiter-Portal muss ein Monat ausgewählt werden, dann erscheint der Knopf für den Export. <br>
+            Ab dem 22. des Monats bis zum Ende des Monats werden anhand der Sollzeiten die Arbeitszeiten geschätzt. <br>
+            Bei TOTAL steht die Zeit inkl. Prognose und Überzeit.<p>
+    </div>
+
+    <button class="accordion">Wie erstelle ich eine Verknüpfung zur Startseite?</button>
+    <div class="panel">
+        <p>Die Startseite ist eine einfache Verlinkung zu allen Portalen. Sie ist unter diesem Link: <a href="index.html">Startseite</a> erreichbar. <br>
+            Markiere die URL, wenn du dich auf der Startseite befindest. Ziehe nun das Markierte auf deinen Desktop.<br>
+        <p>
+    </div>
+
+    <button class="accordion">Wieso wurden mir 30 / 45 min Pause angerechnet, ohne das ich Pause gemacht habe?</button>
+    <div class="panel">
+        <p>
+            Das liegt am folgenden Gesetz: <a href="https://www.gesetze-im-internet.de/arbzg/__4.html">ZUM GESETZ</a>,
+            deshalb wurde dir die Pause automatisch angerechnet.
+        <p>
+    </div>
+
+    <button class="accordion">Was mache ich, wenn ich Urlaub nehme?</button>
+    <div class="panel">
+        <p>
+            Zuerst sendest du Jessica Noack den Urlaubsantrag, <br>und anschließend stellst du für die jeweiligen Urlaubstage einen Antrag.
+        <p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // document.getElementsByClassName("panel").toggle("active");
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

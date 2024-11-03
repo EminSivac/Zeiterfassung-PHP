@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        }
+      </style>
+    <script>
+        function getFocus() {
+        document.getElementById("MitarbeiterID").focus();
+        }
+        </script>
+    <title>Büro-Portal</title>
+</head>
+<body>
+    <h1>Zeiterfassungssystem</h1>
+    <form method="post" action="bueroBestaetigen.php">
+        <p> 
+            <div>
+                <input type="radio" id="Kommt" name="Art" onclick="getFocus()" value="BeginnZeit" required>
+                <label for="Kommt">Arbeit Beginn</label>
+            </div><br>
+            <div>
+                <input type="radio" id="PauseBeginn" name="Art" onclick="getFocus()" value="BeginnPause">
+                <label for="PauseBeginn">Pause Beginn</label>
+            </div><br>
+            <div>
+                <input type="radio" id="PauseEnde" name="Art" onclick="getFocus()" value="EndePause">
+                <label for="PauseEnde">Pause Ende</label>
+            </div><br>
+            <div>
+                <input type="radio" id="Geht" name="Art" onclick="getFocus()" value="EndeZeit">
+                <label for="Geht">Arbeit Ende</label>
+            </div><br>
+            <!-- <div>
+                <input type="radio" id="DienstgangBeginn" name="Art" onclick="getFocus()" value="DienstgangBeginn">
+                <label for="DienstgangBeginn">Dienstgang Beginn</label>
+            </div><br>
+            <div>
+                <input type="radio" id="DienstgangEnde" name="Art" onclick="getFocus()" value="DienstgangEnde">
+                <label for="DienstgangEnde">Dienstgang Ende</label>
+            </div><br> -->
+            <div>
+                <input type="radio" id="Status" name="Art" onclick="getFocus()" value="Status">
+                <label for="Status">Status abfragen</label>
+            </div><br>
+        </p>
+        <p>
+            <label for="MitarbeiterID">MitarbeiterID: </label>
+            <input type="number" id="MitarbeiterID" name="MitarbeiterID" required/>
+        </p>
+        
+
+        <p><button type="submit">Bestätigen</button></p>
+    </form>
+
+</body>
+</html>

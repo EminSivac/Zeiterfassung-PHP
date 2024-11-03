@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antrag stellen</title>
+    <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        }
+      </style>
+</head>
+<body>
+    <h1>Zeiterfassungssystem</h1>
+    <a href='antragstellenFront.php'><button>zurück</button></a>
+    <form method="post" action="antragstellen.php">
+        <p> Datum: <input type="date" name="Datum" id="Datum" required/></p>
+        <p> Arbeitsbeginn: <input type="time" name="BeginnZeit" id="BeginnZeit" value="00:00" required/></p>
+        <p> Arbeitsende: <input type="time" name="EndeZeit" id="EndeZeit" value="00:00" required/></p>
+        <p> Dauer der Pausen: <input type="time" name="DauerPausen" id="DauerPausen" value="00:00" required/></p>
+        <p> Grund:<br>
+            <input type="radio" id="Urlaub" name="Grund" value="Urlaub" required>
+            <label for="Urlaub">Urlaub</label><br>
+            <input type="radio" id="HomeOffice" name="Grund" value="HomeOffice">
+            <label for="HomeOffice">Home Office</label><br>
+            <input type="radio" id="Krankheit" name="Grund" value="Krankheit">
+            <label for="Krankheit">Krankheit</label><br>
+            <input type="radio" id="Dienstgang" name="Grund" value="Dienstgang">
+            <label for="Dienstgang">Dienstgang</label><br>
+            <input type="radio" id="Sonstige" name="Grund" value="Sonstige">
+            <label for="Sonstige">Sonstige</label><br>
+            Beschreibung:<br>
+            <textarea cols="40" rows="5" name="Beschreibung" id="Beschreibung" required></textarea></p>
+        <input type="hidden" name="Art" id="Art" value="Nachtragen"/>
+        <button type="submit">Antrag stellen</button>
+    </form>
+</body>
+</html>
