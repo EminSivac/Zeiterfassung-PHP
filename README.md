@@ -23,7 +23,7 @@ Büro-Tool:
 
 Ein einfaches Tool, mit dem Mitarbeiter sich für den Arbeitstag „stempeln“ können, um ihre Arbeitszeit zu erfassen.
 
-Installation
+Installation:
 
 Alle Dateien in das Verzeichnis auf dem Webserver hochladen, in dem PHP-Skripte ausgeführt werden können.
 Die mitgelieferte .sql-Datei in die Datenbank importieren.
